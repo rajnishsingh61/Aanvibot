@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: aanvi-bot
+    env: python
+    plan: free
+    # Isse Render ko pata chalega ki libraries kaise install karni hain
+    buildCommand: pip install -r requirements.txt
+    # Isse Render ko pata chalega ki bot kaise start karna hai
+    startCommand: python bot.py
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: 8702982878:AAFHeI_qL219b2T5GRpKuwOG1t2M2Pm4-cw
+        # Aapne jo token diya tha wo yahan set kar sakte ho ya Render dashboard se
+        sync: false
+      - key: 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
+        sync: false
